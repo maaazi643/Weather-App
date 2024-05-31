@@ -12,14 +12,14 @@ const getWeatherData = async () => {
     const res = await fetch(apiURL);
     console.log("Response status:", res.status);
     if (!res.ok) {
-      throw new Error('Network response was not okay ' + res.statusText)
+      throw new Error("Network response was not okay " + res.statusText);
     }
     const data = await res.json();
-
+    displayWeatherData(data);
     console.log(data);
   } catch (error) {
     // throw new Error('Failed to fetch Data:' + error)
-    console.error(error)
+    console.error(error);
   }
 };
 
@@ -29,7 +29,15 @@ const displayWeatherData = (data) => {
   const description = data.weather[0].description;
   const humidity = data.main.humidity;
 
+  //Update HTML to display weatherInformation
+  const weatherInformation = document.querySelector(".weatherDisplay");
+  weatherInformation.innerHTML = `
+    <p>Temperature: ${temperature} K</p>
+    <p>Description: ${description}</p>
+    <p>Humidity: ${humidity}%</p>
+  `;
+};
 
-}
+
 
 fetchWeatherButton.addEventListener("click", getWeatherData);
