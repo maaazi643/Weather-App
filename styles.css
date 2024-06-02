@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url("https://source.unsplash.com/random/1920x1080?sky") no-repeat
+    center center fixed;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+}
+
+.cityInput {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.fetchWeatherButton {
+  padding: 10px 20px;
+  background-color: #2575fc;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fetchWeatherButton:hover {
+  background-color: #6a11cb;
+}
+
+.weatherDisplay {
+  margin-top: 20px;
+}
+
+.weatherDisplay p {
+  margin: 10px 0;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.weatherDisplay p img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.loadingMessage {
+  font-size: 1.2em;
+  color: #fff;
+  margin-top: 20px;
+}
